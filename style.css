@@ -1,0 +1,147 @@
+body{
+  
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#nav_upper{
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background-image: linear-gradient(to right, #89ad4d, #d3da83);
+  border-bottom: 5px solid #241f21;
+}
+
+#dirt_banner{
+  transform-origin: bottom left;
+  transform: rotate(90deg) translate(-50px);
+  background-image: url("https://github.com/WVCS/index-JS-APCS/blob/main/store/images/dirt.png?raw=true");
+  width: 100vh;
+  height: 50px;
+  background-size: 250px;
+  z-index: 1;
+}
+
+.tri{
+  width: 40px;
+  height: 40px;
+  background-color: #C2B498;
+  transform: translate(50%) rotate(-150deg) skewX(-30deg) scale(1, 0.866);
+  border-top-right-radius: 30%;
+  
+}
+
+.rect{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #C2B498;
+  width: 180px;
+  height: 40px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.label{
+  position: relative;
+  top: -50%;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: right;
+  z-index: 1;
+}
+
+.stake{
+  transition: 0.25s ease;
+  display: flex;
+  width: fit-content;
+  transform: translate(-10%);
+}
+
+.stake:hover{
+  transform: translate(15%);
+}
+
+.stakes{
+  z-index: 0;
+  height: 50%;
+  width: 100%;
+  transform: translate(30%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#logo{
+  width: 200px;
+  position: relative;
+  left: 50px;
+}
+
+#order{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);  
+  right: 100px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  border: 2px solid #241f21;
+  color: #241f21;
+  transition: 0.1s linear;
+}
+
+#order:hover{
+  background-color: #241f21;
+  color: white;
+  font-weight: bold;
+}
+
+a{
+  font-size: 20px;
+  font-family: sans-serif;
+  padding: 5px;
+}
+
+#sidebar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to right, rgba(15, 15, 15, 1) 0%, rgba(15, 15, 15, 0.75));
+  width: 10%;
+  height: 100%;
+  transform: translate(-200%);
+  transition: transform 1s;
+}
+
+#menu-button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #241f21;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#main{
+  width: 100%;
+  height: 40%;
+  background-size: cover;
+  background-image: url(https://uc53942e09d93683e8c78398b803.previews.dropboxusercontent.com/p/thumb/ABgvemWkt2EzIpTi1gmVFToGMObTpJjtiI96lFZg5h6msgRvA8h5GhFXGIKH6F-4YeXWI_u6gIzl8MwTch2IhoAEIepN-bttxWimNUM9IblbbEogl9eHgrLXOuhW4xEczxMCyUqztH8xoRDcAo6zDbskdKElGevU7BHHhHLmPzdvJgUWNrd6BoIeqS5Z9MR8ac21xt-nK77JQyOclLudpdOn7RZarG8FltI_woYp9LnINyetnEXGtXhqA_qfIIVzNV3Vidd_Zoo9aBI3R7v9kppFFyGQizocO3BigVfWLFYQDpJqM83PEahSbr68HX5wyWlvZU25gd6Eogd3bzzL22WEqySWimkzNh59U6oY60e0vgUUD--YUJ-ZwnhH01qUZck/p.jpeg");
+}
