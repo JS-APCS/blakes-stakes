@@ -1,19 +1,17 @@
-body{
-  
+html{
+  scroll-behavior: smooth;
 }
 
 nav{
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
 
 #nav_upper{
-  position: relative;
   width: 100%;
-  padding: 10px;
-  background-image: linear-gradient(to right, #89ad4d, #d3da83);
+  
+  background-image: linear-gradient(to right, #698f3f, #e7decd);
   border-bottom: 5px solid #241f21;
 }
 
@@ -24,7 +22,8 @@ nav{
   width: 100vh;
   height: 50px;
   background-size: 250px;
-  z-index: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .tri{
@@ -47,8 +46,8 @@ nav{
 }
 
 .label{
-  position: relative;
-  top: -50%;
+  color: black;
+  text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 25px;
@@ -79,8 +78,7 @@ nav{
 
 #logo{
   width: 200px;
-  position: relative;
-  left: 50px;
+  padding: 10px;
 }
 
 #order{
@@ -103,25 +101,20 @@ nav{
   font-weight: bold;
 }
 
-a{
-  font-size: 20px;
-  font-family: sans-serif;
-  padding: 5px;
-}
-
 #sidebar{
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
+  z-index: 10;
   background-image: linear-gradient(to right, rgba(15, 15, 15, 1) 0%, rgba(15, 15, 15, 0.75));
   width: 10%;
   height: 100%;
-  transform: translate(-200%);
+  transform: translate(-300%);
   transition: transform 1s;
 }
 
 #menu-button{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 50px;
@@ -134,14 +127,188 @@ a{
 }
 
 .container{
+  position: absolute;
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  top: 0;
+  left: 0;
 }
 
 #main{
   width: 100%;
-  height: 40%;
+  height: 90%;
   background-size: cover;
-  background-image: url(https://uc53942e09d93683e8c78398b803.previews.dropboxusercontent.com/p/thumb/ABgvemWkt2EzIpTi1gmVFToGMObTpJjtiI96lFZg5h6msgRvA8h5GhFXGIKH6F-4YeXWI_u6gIzl8MwTch2IhoAEIepN-bttxWimNUM9IblbbEogl9eHgrLXOuhW4xEczxMCyUqztH8xoRDcAo6zDbskdKElGevU7BHHhHLmPzdvJgUWNrd6BoIeqS5Z9MR8ac21xt-nK77JQyOclLudpdOn7RZarG8FltI_woYp9LnINyetnEXGtXhqA_qfIIVzNV3Vidd_Zoo9aBI3R7v9kppFFyGQizocO3BigVfWLFYQDpJqM83PEahSbr68HX5wyWlvZU25gd6Eogd3bzzL22WEqySWimkzNh59U6oY60e0vgUUD--YUJ-ZwnhH01qUZck/p.jpeg");
+  background-position: center;
+  background-image: linear-gradient(#0a122a, rgba(10, 18, 42, 0.35) 50%, #0a122a ), url("https://github.com/JS-APCS/blakes-stakes-repo/blob/main/blakes%20stakes%20photos/Blake's%20Stakes%20Photos/IMG_0323.jpg?raw=true");
+  border-bottom: 5px solid #241f21;
+}
+
+h1{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: sans-serif;
+  font-size: 50px;
+  margin: 0px;
+}
+
+p{
+  font-family: sans-serif;
+  color: #f8faf8;
+  padding: 8px;
+  align-text: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+#gallery{
+  width: 100%;
+  background-color: #e7decd;
+  background-image: linear-gradient(rgba(231,222,205, 0.75), rgba(105,143,63, 0.95)), url("https://github.com/JS-APCS/blakes-stakes-repo/blob/main/blakes%20stakes%20photos/Blake's%20Stakes%20Photos/IMG_1637.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+
+#title{
+  width: 100%;
+}
+
+#title::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.stk-r{
+  margin-top: 8px;
+  width: 30%;
+  height: 115px;
+  position: relative;
+  z-index: 1;
+  background-color: #241f21;
+}
+
+.stk-t{
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(100%);
+  width: 0;
+height: 0;
+border-style: solid;
+border-width: 57.5px 0 57.5px 110px;
+border-color: transparent transparent transparent #241f21;
+}
+
+.stk-r2{
+  float: right;
+  margin-top: 8px;
+  width: 30%;
+  height: 115px;
+  position: relative;
+  z-index: 1;
+  background-color: #0a122a;
+}
+
+.stk-t2{
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%);
+  width: 0;
+height: 0;
+border-style: solid;
+border-width: 57.5px 110px 57.5px 0px;
+border-color: transparent #0a122a transparent transparent;
+}
+
+/* Gallery Styling */
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-bottom: 20px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+#contact{
+  width: 100%;
+  background-color: #241f21;
+}
+
+.stk-r3{
+  width: 30%;
+  height: 115px;
+  position: relative;
+  z-index: 1;
+  background-color: #e7decd;
+}
+
+.stk-t3{
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(100%);
+  width: 0;
+height: 0;
+border-style: solid;
+border-width: 57.5px 0 57.5px 110px;
+border-color: transparent transparent transparent #e7decd;
+}
+
+#info{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h2{
+  color: #e7decd;
+  font-family: sans-serif;
+}
+
+#world{
+  width: 100%;
+  background-image: linear-gradient(to bottom left, rgba(52,91,209, 0.8), rgba(10,18,42, 1) 80%), url("https://github.com/JS-APCS/blakes-stakes-repo/blob/main/blakes%20stakes%20photos/Blake's%20Stakes%20Photos/IMG_1666.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+
+#temp{
+  width: 60%;
+  height: 500px;
+  margin-bottom: 50px;
+  background-color: lightBlue;
 }
