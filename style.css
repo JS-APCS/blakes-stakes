@@ -2,6 +2,10 @@ html{
   scroll-behavior: smooth;
 }
 
+body{
+  background-color: black;
+}
+
 nav{
   top: 0;
   left: 0;
@@ -10,56 +14,15 @@ nav{
 
 #nav_upper{
   width: 100%;
-  
+  position: relative;
   background-image: linear-gradient(to right, #698f3f, #e7decd);
   border-bottom: 5px solid #241f21;
-}
-
-#dirt_banner{
-  transform-origin: bottom left;
-  transform: rotate(90deg) translate(-50px);
-  background-image: url("https://github.com/WVCS/index-JS-APCS/blob/main/store/images/dirt.png?raw=true");
-  width: 100vh;
-  height: 50px;
-  background-size: 250px;
-  position: relative;
-  z-index: 2;
-}
-
-.tri{
-  width: 40px;
-  height: 40px;
-  background-color: #C2B498;
-  transform: translate(50%) rotate(-150deg) skewX(-30deg) scale(1, 0.866);
-  border-top-right-radius: 30%;
-  
-}
-
-.rect{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  background-color: #C2B498;
-  width: 180px;
-  height: 40px;
-  border-radius: 0px 10px 10px 0px;
-}
-
-.label{
-  color: black;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-  text-align: right;
-  z-index: 1;
 }
 
 .stake{
   transition: 0.25s ease;
   display: flex;
-  width: fit-content;
-  transform: translate(-10%);
+  width: 300px;
 }
 
 .stake:hover{
@@ -70,35 +33,23 @@ nav{
   z-index: 0;
   height: 50%;
   width: 100%;
-  transform: translate(30%);
+  position: absolute;
+  bottom: 0;
+  transform: translate(10%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: left;
 }
 
 #logo{
-  width: 200px;
+  width: 30%;
   padding: 10px;
 }
 
-#order{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);  
-  right: 100px;
-  padding: 10px;
-  font-size: 20px;
-  font-family: sans-serif;
-  font-weight: lighter;
-  border: 2px solid #241f21;
-  color: #241f21;
-  transition: 0.1s linear;
-}
-
-#order:hover{
-  background-color: #241f21;
-  color: white;
-  font-weight: bold;
+#banner{
+  background-image: linear-gradient(to top, #241f21, transparent 100%);
+  width: 100%;
 }
 
 #sidebar{
@@ -106,11 +57,17 @@ nav{
   left: 0;
   top: 0;
   z-index: 10;
-  background-image: linear-gradient(to right, rgba(15, 15, 15, 1) 0%, rgba(15, 15, 15, 0.75));
-  width: 10%;
+  background-image: linear-gradient(to right, rgba(15, 15, 15, 1) 40%, rgba(15, 15, 15, 0) 100%);
+  width: 40%;
   height: 100%;
   transform: translate(-300%);
-  transition: transform 1s;
+  transition: transform 1.5s;
+}
+
+#side-deco{
+  background-image: linear-gradient(to bottom, #698f3f, #241f21);
+  width: 40%;
+  height: 100%;
 }
 
 #menu-button{
@@ -133,9 +90,33 @@ nav{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
   top: 0;
   left: 0;
+}
+
+#home{
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) -10%, rgba(255, 255, 255, 0.4)), url("https://github.com/JS-APCS/blakes-stakes/blob/main/blakes%20stakes%20photos/Blake's%20Stakes%20Photos/IMG_0292.jpg?raw=true");
+  background-size: cover;
+  background-position: right top;
+}
+
+.marker{
+  width: 50%;
+  margin-top: 3%;
+}
+
+#products{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+#products img{
+  height: 12vw;
 }
 
 #main{
@@ -143,26 +124,67 @@ nav{
   height: 90%;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(#0a122a, rgba(10, 18, 42, 0.35) 50%, #0a122a ), url("https://github.com/JS-APCS/blakes-stakes-repo/blob/main/blakes%20stakes%20photos/Blake's%20Stakes%20Photos/IMG_0323.jpg?raw=true");
-  border-bottom: 5px solid #241f21;
+  background-image: linear-gradient(#0a122a, rgba(10, 18, 52, 0.9), #0a122a ), url("https://github.com/JS-APCS/blakes-stakes-repo/blob/main/blakes%20stakes%20photos/Blake's%20Stakes%20Photos/IMG_0323.jpg?raw=true");
+}
+
+#stake-types{
+  background-color: #bec0c1;
+  width: 100%;
+}
+
+.card img{
+  height: 20vw;
+}
+
+.label{
+  margin: 0px;
+  background-color: white;
+}
+
+#process{
+  padding: 20px 0px 50px 0px;
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: #f8faf8;
+}
+
+#process img{
+  height: 12vw;
 }
 
 h1{
   width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   font-family: sans-serif;
   font-size: 50px;
+}
+
+h2{
+  text-align: center;
   margin: 0px;
+  text-decoration: overline;
+  color: #241f21;
+  font-family: sans-serif;
+}
+
+h4{
+  color: #e7decd;
+  font-family: sans-serif;
 }
 
 p{
+  font-size: 20px;
   font-family: sans-serif;
   color: #f8faf8;
   padding: 8px;
   align-text: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+p img{
+  height: 15vw;
+  margin: 10px;
 }
 
 #gallery{
@@ -181,49 +203,6 @@ p{
   content: "";
   clear: both;
   display: table;
-}
-
-.stk-r{
-  margin-top: 8px;
-  width: 30%;
-  height: 115px;
-  position: relative;
-  z-index: 1;
-  background-color: #241f21;
-}
-
-.stk-t{
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: translate(100%);
-  width: 0;
-height: 0;
-border-style: solid;
-border-width: 57.5px 0 57.5px 110px;
-border-color: transparent transparent transparent #241f21;
-}
-
-.stk-r2{
-  float: right;
-  margin-top: 8px;
-  width: 30%;
-  height: 115px;
-  position: relative;
-  z-index: 1;
-  background-color: #0a122a;
-}
-
-.stk-t2{
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(-100%);
-  width: 0;
-height: 0;
-border-style: solid;
-border-width: 57.5px 110px 57.5px 0px;
-border-color: transparent #0a122a transparent transparent;
 }
 
 /* Gallery Styling */
@@ -269,34 +248,9 @@ border-color: transparent #0a122a transparent transparent;
   background-color: #241f21;
 }
 
-.stk-r3{
-  width: 30%;
-  height: 115px;
-  position: relative;
-  z-index: 1;
-  background-color: #e7decd;
-}
-
-.stk-t3{
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: translate(100%);
-  width: 0;
-height: 0;
-border-style: solid;
-border-width: 57.5px 0 57.5px 110px;
-border-color: transparent transparent transparent #e7decd;
-}
-
 #info{
   display: flex;
   justify-content: space-evenly;
-}
-
-h2{
-  color: #e7decd;
-  font-family: sans-serif;
 }
 
 #world{
@@ -311,4 +265,11 @@ h2{
   height: 500px;
   margin-bottom: 50px;
   background-color: lightBlue;
+}
+
+#foot{
+  background-color: red;
+  background-image: linear-gradient(to right, #0f0f0f, #241f21);
+  width: 100%;
+  height: 200px;
 }
