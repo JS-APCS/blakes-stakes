@@ -149,19 +149,22 @@ nav{
 
 .card img{
   height: 20vw;
+  min-height: 200px;
 }
 
 #process{
   padding: 20px 0px 50px 0px;
   display: flex; 
-  flex-direction: row; 
+  flex-flow: row wrap; 
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
 }
 
 #process img{
+  margin-top: 15px;
   height: 12vw;
+  min-height: 140px;
 }
 
 h1{
